@@ -1,0 +1,36 @@
+Package: fereg
+Title: Fast Fixed-Effects Estimation with the 'fixest' Interface
+Version: 0.4.0
+Authors@R: c(
+    person("Leo", "Liu", email = "auleo.liu@gmail.com", role = c("aut", "cre", "cph")),
+    person("Authors of the bundled Rust crates", role = c("ctb", "cph"),
+           comment = "see inst/AUTHORS for each crate's authors and license")
+  )
+Description: Ordinary least squares, two-stage least squares, Poisson and
+    logit regressions with any number of high-dimensional fixed effects,
+    interactions of fixed effects, varying slopes, weights and iid,
+    heteroskedasticity-robust (HC1, HC2, HC3), multiway-clustered, CRV3,
+    Newey-West, Driscoll-Kraay or Conley standard errors. The formula syntax,
+    arguments, results and methods follow the 'fixest' package and reproduce
+    its estimates. The computations run in a parallel 'Rust' library that
+    eliminates the largest fixed effect exactly and solves for the others by
+    preconditioned conjugate gradient.
+License: MIT + file LICENSE
+URL: https://github.com/leoliu0/fereg
+BugReports: https://github.com/leoliu0/fereg/issues
+Depends: R (>= 4.2)
+Imports: stats
+Suggests: fixest, testthat (>= 3.0.0), data.table, generics, Matrix
+SystemRequirements: Cargo (Rust's package manager), rustc (>= 1.85)
+Config/testthat/edition: 3
+Encoding: UTF-8
+LazyData: true
+Config/roxygen2/version: 8.1.1
+NeedsCompilation: yes
+Packaged: 2026-10-14 12:13:57 UTC; leo
+Author: Leo Liu [aut, cre, cph],
+  Authors of the bundled Rust crates [ctb, cph] (see inst/AUTHORS for
+    each crate's authors and license)
+Maintainer: Leo Liu <auleo.liu@gmail.com>
+Repository: CRAN
+Date/Publication: 2026-10-22 16:30:02 UTC
